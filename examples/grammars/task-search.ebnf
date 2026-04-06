@@ -1,0 +1,29 @@
+word = /^[a-zA-Z][a-zA-Z0-9_-]*/ ;
+
+quoted_text = /^"([^"\\\\]|\\\\.)*"/ ;
+
+number = /^[0-9]+/ ;
+
+status_value = "open" | "closed" | "draft" ;
+
+priority_value = "low" | "medium" | "high" ;
+
+tag_filter = "tag:" , word ;
+
+status_filter = "status:" , status_value ;
+
+priority_filter = "priority:" , priority_value ;
+
+assignee_filter = "assignee:" , word ;
+
+limit_filter = "limit:" , number ;
+
+text_filter = quoted_text ;
+
+filter = tag_filter | status_filter | priority_filter | assignee_filter | limit_filter | text_filter ;
+
+spaced_filter = /^\s+/ , filter ;
+
+filter_list = filter , { spaced_filter } ;
+
+search_request = filter_list ;
