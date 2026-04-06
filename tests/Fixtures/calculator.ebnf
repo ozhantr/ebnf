@@ -1,0 +1,13 @@
+integer = /^[0-9]+/ ;
+
+add_operator = "+" | "-" ;
+
+multiply_operator = "*" | "/" ;
+
+group = "(" , /^\s*/ , expression , /^\s*/ , ")" ;
+
+factor = integer | group ;
+
+term = factor , { /^\s*/ , multiply_operator , /^\s*/ , factor } ;
+
+expression = term , { /^\s*/ , add_operator , /^\s*/ , term } ;

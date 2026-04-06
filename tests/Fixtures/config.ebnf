@@ -1,0 +1,17 @@
+key = /^[a-zA-Z][a-zA-Z0-9_.-]*/ ;
+
+quoted_text = /^"([^"\\\\]|\\\\.)*"/ ;
+
+boolean_value = "true" | "false" ;
+
+number_value = /^[0-9]+/ ;
+
+value = quoted_text | boolean_value | number_value ;
+
+assignment = key , /^\s*=\s*/ , value ;
+
+next_assignment = /^\n+/ , assignment ;
+
+assignment_list = assignment , { next_assignment } ;
+
+document = assignment_list ;
