@@ -1,6 +1,19 @@
 {
     "name": "ozhantr/ebnf",
-    "description": "Production-grade, framework-agnostic PHP library for parsing EBNF grammars.",
+    "description": "Framework-agnostic PHP library for parsing, analyzing, and validating EBNF grammars.",
+    "keywords": [
+        "ebnf",
+        "parser",
+        "grammar",
+        "dsl",
+        "lexer",
+        "ast"
+    ],
+    "homepage": "https://github.com/ozhantr/ebnf",
+    "support": {
+        "issues": "https://github.com/ozhantr/ebnf/issues",
+        "source": "https://github.com/ozhantr/ebnf"
+    },
     "type": "library",
     "license": "MIT",
     "require": {
