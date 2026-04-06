@@ -38,6 +38,31 @@ You might use this library when you want to:
 - build grammar-driven textarea or editor validation
 - experiment with or debug EBNF grammars in PHP
 
+## EBNF Syntax Basics
+
+This library currently supports a practical subset of EBNF syntax:
+
+- `rule = expression ;`
+  defines a grammar rule
+- `a , b`
+  means `a` followed by `b`
+- `a | b`
+  means `a` or `b`
+- `[ a ]`
+  makes `a` optional
+- `{ a }`
+  means `a` can repeat zero or more times
+- `( a )`
+  groups expressions
+- `"text"`
+  matches a literal string
+- `/.../`
+  matches a regex terminal
+- `identifier`
+  references another rule
+
+See [docs/grammar-syntax.md](docs/grammar-syntax.md) for a fuller syntax guide.
+
 ## Features
 
 - Strictly typed token system
