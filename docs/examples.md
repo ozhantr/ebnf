@@ -12,7 +12,7 @@ The examples are intentionally small and focus on one workflow at a time:
 - validating real input against a grammar
 - analyzing a grammar for semantic issues
 
-The example grammars in this directory are designed to be readable first. They avoid domain-specific names from older internal grammars and instead use clear concepts such as search filters and calculator expressions.
+The example grammars in this directory are designed to be readable first and focus on clear concepts such as search filters and calculator expressions.
 
 ## Example grammars
 
